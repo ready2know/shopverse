@@ -6,7 +6,12 @@ const bodyParser = require("body-parser");
 app.set("view engine", "ejs");
 app.set("views", "views");
 
+app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({ extended: false }));
+
+const loggerController = require("./controllers/logger");
+app.use(loggerController.visitLogger)
 
 const shopRouter = require("./routes/shop");
 app.use("/", shopRouter);

@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <%- include('includes/head.ejs') %>
 </head>
+
 <body>
-    <h1>Welcome in our shop.</h1>
+    <%- include('includes/header.ejs') %>
+
+        <main>
+            <h1>Welcome in our shop.</h1>
+            <% if(hasProducts) {%>
+                <ul>
+                    <% for(let product of products){%>
+                        <li>
+                            <%= product.title %>
+                                <%= product.price %>
+                        </li>
+                        <% } %>
+                </ul>
+                <% } else { %>
+                    Don't have products.
+                    <% } %>
+        </main>
 </body>
+
 </html>
