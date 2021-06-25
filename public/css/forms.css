@@ -1,0 +1,28 @@
+.form-add-product{
+    margin: 1.5rem 0;
+}
+
+.form-add-product input, .form-add-product label, .form-add-product textarea, .form-add-product button{
+    display: block;
+    width: 20rem;
+    margin-bottom: 0.3rem;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: white;
+    border: 2px solid #284705;
+    border-radius: 5px;
+    letter-spacing: 0.3rem;
+}
+
+button:hover{
+    background-color: #e5ffc7;
+    color: #74291f;
+    cursor: pointer;
+}
