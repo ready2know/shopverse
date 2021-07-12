@@ -10,5 +10,12 @@
     <%- include('../includes/header.ejs') %>
 
         <main>
+            <div>
+                <div class="title"><img src="<%= product.imageURL %>" alt="" srcset=""></div>
+                <div class="title"><%= product.title%></div>
+                <div class="price"><%= product.price%></div>
+                <div class="description"><%= product.description%></div>
+                
+            </div>
         </main>
 </body>
